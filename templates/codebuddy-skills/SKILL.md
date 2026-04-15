@@ -1,5 +1,5 @@
 ---
-name: UI自动化测试
+name: ui-automation-test
 description: 根据测试用例，生成python脚本,自动化执行
 tools: list_dir, search_file, search_content, read_file, read_lints, replace_in_file, write_to_file, execute_command, create_rule, delete_file, preview_url, web_fetch, use_skill
 agentMode: manual
@@ -11,9 +11,9 @@ enabledAutoRun: true
 
 # 核心输入依据
 1.  用户左侧工作区的测试用例，生成python脚本
-2   所有测试脚本放置在一个单独的文件夹下
-2.  根据脚本，打开浏览器登录系统
-3.  登录系统后，执行测试用例
+2.  所有测试脚本放置在一个单独的文件夹下
+3.  根据脚本，打开浏览器登录系统
+4.  登录系统后，执行测试用例
 
 # 🔴 登录系统海宏IOT2.0平台
 1.  登录地址：https://iot.csmart-test.com/#/login
