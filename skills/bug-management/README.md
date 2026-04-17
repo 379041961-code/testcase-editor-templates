@@ -85,12 +85,7 @@ $env:CLOUD_EFFECT_PASSWORD = "R20250918"
 
 **完整示例：**
 ```
-BUG标题: 用户列表页面加载缓慢
-预期结果: 页面应在3秒内加载完成
-实际结果: 页面需要30秒才能加载
-截图路径: C:\Users\Desktop\bug.png
-项目名称: IOT平台2.0
-负责人: liu.ting@alibaba-inc.com 或 刘庭
+IOT平台 2.0。【iot2.0-正式环境】西堆，DSM 设备与大屏没对应。预期结果：DSM设备与大屏对应。欧益华。C:\Users\SZHWCL02\Desktop\Artificial Intelligence\skills\bug-management\png\image.png,C:\Users\SZHWCL02\Desktop\Artificial Intelligence\skills\bug-management\png\微信图片_2026-02-14_110904_741.png
 ```
 
 ## 使用方式
