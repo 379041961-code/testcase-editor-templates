@@ -1,0 +1,121 @@
+[09:25:56] 自动化测试开始 - 2026-04-14 09:25:56.603525
+[09:25:56] === 初始化浏览器 ===
+[09:26:02] ✓ 浏览器初始化完成
+[09:26:02] === 加载测试用例 ===
+[09:26:02]   └─ TC_DS_001: 已登录IOT平台
+[09:26:02]   └─ TC_DS_002: 全局筛选-系统切换展示正确
+[09:26:02]   └─ TC_DS_003: 全局筛选-系统切换展示正确
+[09:26:02]   └─ TC_DS_004: 设备状态分布
+[09:26:02] ✓ 加载了 4 个测试用例
+[09:26:02] 
+================================================================================
+[09:26:02] 执行用例: TC_DS_001 - 已登录IOT平台
+[09:26:02] ================================================================================
+[09:26:02] 步骤1: 打开登录页面
+[09:26:03]   当前URL: https://iot.csmart-test.com/#/login
+[09:26:06] 分析登录页面元素...
+[09:26:06] 步骤2: 输入账号和密码
+[09:26:16]   ✓ 输入账号: raolekang
+[09:26:27]   ✓ 输入密码
+[09:26:27] 步骤3: 输入验证码（请在浏览器中手动输入，超时时间: 15秒）
+[09:26:27] 
+⏳ 等待验证码输入 (最多15秒)...
+[09:26:28]   继续等待... (15秒)
+[09:26:32]   ✓ 检测到验证码输入: ****
+[09:26:32] 步骤4: 勾选'记住我'并点击登录
+[09:26:32]   ✓ 已勾选'记住我'
+[09:26:32]   ✓ 已点击登录按钮
+[09:26:32] 等待登录成功...
+[09:26:34] ✓ 登录成功，已跳转到: https://iot.csmart-test.com/#/iot/home
+[09:26:36] 
+================================================================================
+[09:26:36] 执行用例: TC_DS_002 - 全局筛选-系统切换展示正确
+[09:26:36] ================================================================================
+[09:26:38] 步骤1: 进入首页并分析筛选框
+[09:26:38] ✓ 页面源代码已保存: page_before_filter_092638.html
+[09:26:39] 找到的筛选相关元素: {
+  "系统筛选框": {
+    "count": 6,
+    "elements": [
+      {
+        "tag": "span",
+        "text": "",
+        "class": "ant-pro-menu-item-title",
+        "id": "",
+        "html": "<span class=\"ant-pro-menu-item-title\">仪表盘</span>"
+      },
+      {
+        "tag": "span",
+        "text": "",
+        "class": "ant-pro-menu-item-title",
+        "id": "",
+        "html": "<span class=\"ant-pro-menu-item-title\">仪表盘</span>"
+      },
+      {
+        "tag": "span",
+        "text": "",
+        "class": "ant-pro-menu-item-title",
+        "id": "",
+        "html": "<span class=\"ant-pro-menu-item-title\">仪表盘</span>"
+      }
+    ]
+  },
+  "下拉框选项": {
+    "count": 15,
+    "elements": [
+      {
+        "tag": "div",
+        "text": "中文",
+        "class": "ant-select ant-select-single ant-select-show-arrow",
+        "id": "",
+        "html": "<div data-v-df644b61=\"\" class=\"ant-select ant-select-single ant-select-show-arrow\" style=\"width: 100px;\"><!----><!----><div class=\"ant-select-selector"
+      },
+      {
+        "tag": "div",
+        "text": "中文",
+        "class": "ant-select-selector",
+        "id": "",
+        "html": "<div class=\"ant-select-selector\"><span class=\"ant-select-selection-search\"><input type=\"search\" id=\"rc_select_0\" autocomplete=\"off\" class=\"ant-select-"
+      },
+      {
+        "tag": "div",
+        "text": "饶乐康",
+        "class": "user-info ant-dropdown-trigger",
+        "id": "",
+        "html": "<div data-v-f73da793=\"\" class=\"user-info ant-dropdown-trigger\"><span data-v-f73da793=\"\" class=\"ant-avatar ant-avatar-circle ant-avatar-icon\" style=\"wi"
+      }
+    ]
+  },
+  "市场化盘": {
+    "count": 0,
+    "elements": []
+  },
+  "查询按钮": {
+    "count": 0,
+    "elements": []
+  }
+}
+[09:26:39] 步骤2: 定位并点击系统筛选下拉框
+[09:26:39]   ✗ 未找到系统筛选框
+[09:26:39] 
+✗ 测试执行出现异常: 'TC_DS_003'
+[09:26:39] Traceback (most recent call last):
+  File "C:\Users\SZHWCL02\Desktop\Artificial Intelligence\auto_tests\ui_automation_final.py", line 474, in run_all_tests
+    if results['TC_DS_003']:
+       ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'TC_DS_003'
+
+[09:26:39] 
+关闭浏览器...
+[09:26:41] ✓ 浏览器已关闭
+[09:26:41] 
+================================================================================
+[09:26:41] 测试结果总结
+[09:26:41] ================================================================================
+[09:26:41] TC_DS_001: ✓ 通过
+[09:26:41] TC_DS_002: ✗ 失败
+[09:26:41] TC_DS_003: - (未执行)
+[09:26:41] TC_DS_004: - (未执行)
+[09:26:41] 
+总计: 1/2 测试通过
+[09:26:41] 测试日志已保存: test_log_20260414_092556.txt

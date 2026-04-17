@@ -1,0 +1,13 @@
+{
+  "cloudEffect": {
+    "baseUrl": "https://work.alibaba-inc.com",
+    "projectId": "your-project-id",
+    "defaultPriority": "P2",
+    "defaultAssignee": "your-team@alibaba-inc.com"
+  },
+  "upload": {
+    "maxFileSize": 10485760,
+    "allowedTypes": ["jpg", "png", "gif", "zip", "txt", "pdf"],
+    "uploadPath": "./bug-attachments"
+  }
+}
