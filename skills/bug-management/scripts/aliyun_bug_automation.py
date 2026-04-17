@@ -3,20 +3,20 @@
 使用Selenium自动化操作阿里云效BUG系统Web界面
 """
 
+import json
 import os
 import time
-import json
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+from typing import Any, cast
 
-from selenium.webdriver import ActionChains
-from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 try:
     import pyautogui
@@ -26,8 +26,8 @@ except ImportError as e:
     PYAUTOGUI_AVAILABLE = False
     print(f"⚠ 警告: PyAutoGUI模块不可用 ({str(e)})")
     print("  请运行: pip install pyautogui pyperclip")
-    pyautogui = None
-    pyperclip = None
+    pyautogui = cast(Any, None)
+    pyperclip = cast(Any, None)
 
 
 class AliyunCloudEffectAutomation:
@@ -45,10 +45,24 @@ class AliyunCloudEffectAutomation:
         self.username = username
         self.password = password
         self.config = self._load_config(config_path)
-        self.driver: WebDriver | None = None
-        self.wait: WebDriverWait | None = None
+        self._driver: WebDriver | None = None
+        self._wait: WebDriverWait | None = None
         self.screenshots_dir = Path("./bug-submission-screenshots")
         self.screenshots_dir.mkdir(exist_ok=True)
+
+    @property
+    def driver(self) -> WebDriver:
+        """返回已初始化的浏览器驱动，未初始化时抛出明确错误。"""
+        if self._driver is None:
+            raise RuntimeError("浏览器驱动未初始化，请先调用 start_driver()")
+        return self._driver
+
+    @property
+    def wait(self) -> WebDriverWait:
+        """返回已初始化的显式等待对象，未初始化时抛出明确错误。"""
+        if self._wait is None:
+            raise RuntimeError("等待器未初始化，请先调用 start_driver()")
+        return self._wait
     
     def _load_config(self, config_path):
         """加载配置文件"""
@@ -106,7 +120,7 @@ class AliyunCloudEffectAutomation:
             options.add_argument(
                 'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
 
-            self.driver = webdriver.Chrome(options=options)
+            self._driver = webdriver.Chrome(options=options)
             # 关键：启动后立即执行 JS 隐藏 webdriver 属性
             self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": """
@@ -116,7 +130,7 @@ class AliyunCloudEffectAutomation:
             """
             })
             self.driver.maximize_window()
-            self.wait = WebDriverWait(self.driver, 60)  # 增加到60秒超时
+            self._wait = WebDriverWait(self.driver, 60)  # 增加到60秒超时
             print("✓ 浏览器驱动已启动（无头模式）")
             return True
         except Exception as e:
@@ -626,8 +640,8 @@ class AliyunCloudEffectAutomation:
     
     def close_driver(self):
         """关闭浏览器"""
-        if self.driver:
-            self.driver.quit()
+        if self._driver:
+            self._driver.quit()
             print("✓ 浏览器已关闭")
     
     def get_current_url(self):
