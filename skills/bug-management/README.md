@@ -156,10 +156,11 @@ automation.close_driver()
 
 常见的云效项目名称（精确拼写）：
 
-- `IOT平台2.0`
+- `IOT平台 2.0`
 - `C-smart 6.0`
-- `幸福工作3.0`
+- `幸福工友3.0`
 - `CSMART5.0`
+务必拼写准确
 
 ## 常见用户
 
@@ -169,6 +170,10 @@ automation.close_driver()
 - liu.xi@alibaba-inc.com
 - li.sha@alibaba-inc.com
 - ou.linhua@alibaba-inc.com
+
+我们这里输入用户姓名即可
+- 欧益华
+- 李杰
 
 ## 执行结果
 

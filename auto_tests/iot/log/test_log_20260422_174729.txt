@@ -1,0 +1,227 @@
+[17:47:29] === 初始化浏览器 ===
+[17:47:33] ✓ 浏览器已就绪
+[17:47:33] === 加载测试用例：C:\Users\SZHWCL02\Desktop\Artificial Intelligence\excel\设备统计_测试用例.xlsx ===
+[17:47:33] ✓ 共加载 4 条用例
+[17:47:33]    TC_DS_001 | 已登录IOT平台 | 优先级:高
+[17:47:33]    TC_DS_002 | 全局筛选-系统切换展示正确 | 优先级:高
+[17:47:33]    TC_DS_003 | 全局筛选-系统切换展示正确 | 优先级:高
+[17:47:33]    TC_DS_004 | 设备状态分布 | 优先级:高
+[17:47:33] 
+============================================================
+[17:47:33] TC_DS_001  已登录 IOT 平台
+[17:47:33] ============================================================
+[17:47:33] 步骤1：打开登录页
+[17:47:38]   页面已保存：html/login_page_174738.html
+[17:47:38] 分析页面输入框...
+[17:47:38] <input data-v-f88407e4="" placeholder="请输入账号" maxlength="64" autocomplete="off" type="text" id="form_item_username" class="ant-input" value="">
+<input placeholder="请输入密码" maxlength="64" autocomplete="off" id="form_item_password" type="password" class="ant-input">
+<input autocomplete="off" maxlength="64" placeholder="请输入验证码" type="text" id="form_item_verifyCode" class="ant-input" value="">
+<input type="checkbox" class="ant-checkbox-input" value="false">
+[17:47:38] 步骤2：输入账号密码
+[17:47:41]   ✓ 账号输入完成：raolekang
+[17:47:44]   ✓ 密码输入完成
+[17:47:44] 步骤3：等待验证码输入（最多 15 秒）...
+[17:47:50]   ✓ 检测到验证码已输入（7秒）
+[17:47:50] 步骤3：勾选记住我
+[17:47:50]   分析记住我相关元素：
+[17:47:50] (无匹配元素)
+[17:47:50] <input type="checkbox" class="ant-checkbox-input" value="false">
+[17:47:50]   ✓ 已勾选记住我
+[17:47:50] 步骤4：点击登录按钮
+[17:47:50]   分析按钮元素：
+[17:47:50] <button data-v-f88407e4="" class="ant-btn ant-btn-primary ant-btn-block login-form-button" type="submit"><!----><span>登 录</span></button>
+[17:47:50]   ✓ 点击：登录按钮
+[17:47:50] 等待登录跳转...
+[17:47:51] ✓ 登录成功，当前 URL：https://iot.csmart-test.com/#/iot/home
+[17:47:53] 
+============================================================
+[17:47:53] TC_DS_002  全局筛选-系统切换展示正确
+[17:47:53] ============================================================
+[17:47:55]   页面已保存：html/before_filter_174755.html
+[17:47:55] 步骤1：验证筛选框默认值
+[17:47:55]   分析顶部筛选相关 span 元素：
+[17:47:55] (无匹配元素)
+[17:47:55]   ✓ 默认选中：C-Smart内部盘
+[17:47:55] 步骤2：点击系统下拉框
+[17:47:55]   ✓ 点击：系统下拉框
+[17:47:56] 步骤3：选择【市场化盘】
+[17:47:56]   分析下拉选项：
+[17:47:56] <div class="ant-select-item-option-content">市场化盘</div>
+[17:47:56]   ✓ 点击：市场化盘
+[17:47:57] 步骤4：点击查询按钮
+[17:47:57]   分析查询按钮：
+[17:47:57] (无匹配元素)
+[17:47:57]   ✓ 点击：查询按钮
+[17:47:59] 步骤5：验证结果
+[17:47:59] ✓ 页面显示【暂无数据】，用例通过
+[17:48:01] 
+============================================================
+[17:48:01] TC_DS_003  导出 PDF 文件
+[17:48:01] ============================================================
+[17:48:01]   分析导出按钮：
+[17:48:01] (无匹配元素)
+[17:48:01]   ✓ 点击：导出按钮
+[17:48:02]   分析 PDF 选项：
+[17:48:02] (无匹配元素)
+[17:48:03]   ✓ 点击：PDF选项
+[17:48:03]   ✓ 点击：确定按钮
+[17:48:06] ✓ 导出操作完成
+[17:48:08] 
+============================================================
+[17:48:08] TC_DS_004  设备状态分布
+[17:48:08] ============================================================
+[17:48:10]   页面已保存：html/before_device_dist_174810.html
+[17:48:10] 步骤1：分析柱状图中的 4G手表 元素
+[17:48:10] (无匹配元素)
+[17:48:10] (无匹配元素)
+[17:48:10] (无匹配元素)
+[17:48:15]   ✗ 未找到可点击元素：4G手表柱状图  (Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xdbc733+10b73]
+	chromedriver!GetHandleVerifier [0xdbc864+10ca4]
+	chromedriver!(No symbol) [0xb92100]
+	chromedriver!(No symbol) [0xbdacba]
+	chromedriver!(No symbol) [0xbdaf5b]
+	chromedriver!(No symbol) [0xc1d9c2]
+	chromedriver!(No symbol) [0xbfdc64]
+	chromedriver!(No symbol) [0xc1b1f4]
+	chromedriver!(No symbol) [0xbfd9b6]
+	chromedriver!(No symbol) [0xbd0339]
+	chromedriver!(No symbol) [0xbd10f4]
+	chromedriver!GetHandleVerifier [0x101fe04+274244]
+	chromedriver!GetHandleVerifier [0x101b459+26f899]
+	chromedriver!GetHandleVerifier [0x1039bd5+28e015]
+	chromedriver!GetHandleVerifier [0xdd7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xddf23d+3367d]
+	chromedriver!GetHandleVerifier [0xdc5138+19578]
+	chromedriver!GetHandleVerifier [0xdc5302+19742]
+	chromedriver!GetHandleVerifier [0xdae48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x74b65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x775cd83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x775cd7c1+231]
+)
+[17:48:20]   ✗ 未找到可点击元素：4G手表柱状图  (Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xdbc733+10b73]
+	chromedriver!GetHandleVerifier [0xdbc864+10ca4]
+	chromedriver!(No symbol) [0xb92100]
+	chromedriver!(No symbol) [0xbdacba]
+	chromedriver!(No symbol) [0xbdaf5b]
+	chromedriver!(No symbol) [0xc1d9c2]
+	chromedriver!(No symbol) [0xbfdc64]
+	chromedriver!(No symbol) [0xc1b1f4]
+	chromedriver!(No symbol) [0xbfd9b6]
+	chromedriver!(No symbol) [0xbd0339]
+	chromedriver!(No symbol) [0xbd10f4]
+	chromedriver!GetHandleVerifier [0x101fe04+274244]
+	chromedriver!GetHandleVerifier [0x101b459+26f899]
+	chromedriver!GetHandleVerifier [0x1039bd5+28e015]
+	chromedriver!GetHandleVerifier [0xdd7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xddf23d+3367d]
+	chromedriver!GetHandleVerifier [0xdc5138+19578]
+	chromedriver!GetHandleVerifier [0xdc5302+19742]
+	chromedriver!GetHandleVerifier [0xdae48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x74b65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x775cd83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x775cd7c1+231]
+)
+[17:48:26]   ✗ 未找到可点击元素：4G手表柱状图  (Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xdbc733+10b73]
+	chromedriver!GetHandleVerifier [0xdbc864+10ca4]
+	chromedriver!(No symbol) [0xb92100]
+	chromedriver!(No symbol) [0xbdacba]
+	chromedriver!(No symbol) [0xbdaf5b]
+	chromedriver!(No symbol) [0xc1d9c2]
+	chromedriver!(No symbol) [0xbfdc64]
+	chromedriver!(No symbol) [0xc1b1f4]
+	chromedriver!(No symbol) [0xbfd9b6]
+	chromedriver!(No symbol) [0xbd0339]
+	chromedriver!(No symbol) [0xbd10f4]
+	chromedriver!GetHandleVerifier [0x101fe04+274244]
+	chromedriver!GetHandleVerifier [0x101b459+26f899]
+	chromedriver!GetHandleVerifier [0x1039bd5+28e015]
+	chromedriver!GetHandleVerifier [0xdd7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xddf23d+3367d]
+	chromedriver!GetHandleVerifier [0xdc5138+19578]
+	chromedriver!GetHandleVerifier [0xdc5302+19742]
+	chromedriver!GetHandleVerifier [0xdae48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x74b65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x775cd83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x775cd7c1+231]
+)
+[17:48:26]   ⚠ 未找到文字元素，尝试通过 JS 触发 ECharts 点击 4G手表
+[17:48:26]   页面已保存：html/no_4g_watch_element_174826.html
+[17:48:26]   ECharts JS 触发结果：None
+[17:48:29] 步骤2：分析点击后出现的弹窗
+[17:48:29] (无匹配元素)
+[17:48:29] <div class="ant-modal-root"><div class="ant-modal-mask" style="display: none;"></div><div tabindex="-1" class="ant-modal-wrap" role="dialog" aria-labelledby="vcDialogTitle0" style="display: none;"><di
+<div class="ant-modal-mask" style="display: none;"></div>
+<div tabindex="-1" class="ant-modal-wrap" role="dialog" aria-labelledby="vcDialogTitle0" style="display: none;"><div class="ant-modal" role="document" style="width: 640px; transform-origin: 233px 42px
+<div class="ant-modal" role="document" style="width: 640px; transform-origin: 233px 42px; display: none;"><div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline
+<div class="ant-modal-content"><button type="button" aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><span role="img" aria-label="close" class="anticon anticon-close ant-mod
+[17:48:29] 步骤3：点击查看详情
+[17:48:37]   ✗ 未找到可点击元素：查看详情  (Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xdbc733+10b73]
+	chromedriver!GetHandleVerifier [0xdbc864+10ca4]
+	chromedriver!(No symbol) [0xb92100]
+	chromedriver!(No symbol) [0xbdacba]
+	chromedriver!(No symbol) [0xbdaf5b]
+	chromedriver!(No symbol) [0xc1d9c2]
+	chromedriver!(No symbol) [0xbfdc64]
+	chromedriver!(No symbol) [0xc1b1f4]
+	chromedriver!(No symbol) [0xbfd9b6]
+	chromedriver!(No symbol) [0xbd0339]
+	chromedriver!(No symbol) [0xbd10f4]
+	chromedriver!GetHandleVerifier [0x101fe04+274244]
+	chromedriver!GetHandleVerifier [0x101b459+26f899]
+	chromedriver!GetHandleVerifier [0x1039bd5+28e015]
+	chromedriver!GetHandleVerifier [0xdd7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xddf23d+3367d]
+	chromedriver!GetHandleVerifier [0xdc5138+19578]
+	chromedriver!GetHandleVerifier [0xdc5302+19742]
+	chromedriver!GetHandleVerifier [0xdae48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x74b65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x775cd83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x775cd7c1+231]
+)
+[17:48:45]   ✗ 未找到可点击元素：查看详情  (Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xdbc733+10b73]
+	chromedriver!GetHandleVerifier [0xdbc864+10ca4]
+	chromedriver!(No symbol) [0xb92100]
+	chromedriver!(No symbol) [0xbdacba]
+	chromedriver!(No symbol) [0xbdaf5b]
+	chromedriver!(No symbol) [0xc1d9c2]
+	chromedriver!(No symbol) [0xbfdc64]
+	chromedriver!(No symbol) [0xc1b1f4]
+	chromedriver!(No symbol) [0xbfd9b6]
+	chromedriver!(No symbol) [0xbd0339]
+	chromedriver!(No symbol) [0xbd10f4]
+	chromedriver!GetHandleVerifier [0x101fe04+274244]
+	chromedriver!GetHandleVerifier [0x101b459+26f899]
+	chromedriver!GetHandleVerifier [0x1039bd5+28e015]
+	chromedriver!GetHandleVerifier [0xdd7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xddf23d+3367d]
+	chromedriver!GetHandleVerifier [0xdc5138+19578]
+	chromedriver!GetHandleVerifier [0xdc5302+19742]
+	chromedriver!GetHandleVerifier [0xdae48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x74b65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x775cd83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x775cd7c1+231]
+)
+[17:48:45]   ✗ 未找到查看详情按钮
+[17:48:46]   页面已保存：html/no_detail_btn_174845.html
+[17:48:46] 关闭浏览器...
+[17:48:48] 
+============================================================
+[17:48:48] 测试结果汇总
+[17:48:48] ============================================================
+[17:48:48]   TC_DS_001 [已登录IOT平台]: ✓ 通过
+[17:48:48]   TC_DS_002 [全局筛选-系统切换]: ✓ 通过
+[17:48:48]   TC_DS_003 [导出PDF文件]: ✓ 通过
+[17:48:48]   TC_DS_004 [设备状态分布]: ✗ 失败
+[17:48:48] 
+  通过率：3/4
+[17:48:48]   日志文件：C:\Users\SZHWCL02\Desktop\Artificial Intelligence\auto_tests\iot\log\test_log_20260422_174729.txt
